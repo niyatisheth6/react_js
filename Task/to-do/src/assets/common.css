@@ -1,0 +1,24 @@
+ .card{
+    @apply p-3 bg-gray-500 w-[800px] h-[800px] mt-4 flex  flex-col
+ }   
+ .form_input{
+    @apply w-full p-3 outline-none
+ }
+ .btn_primary{
+    @apply py-3 !bg-white !text-black px-7 mx-2
+ }
+ li{
+    @apply w-full p-3 bg-white mt-2 font-semibold flex justify-between items-center;
+ }
+ .btn_primary:disabled{
+   @apply cursor-not-allowed !bg-gray-400 text-white;
+ }
+ .close{
+   @apply bg-transparent absolute left-[-38px] top-[11px] w-[25px] h-[25px]
+ }
+ img{
+   @apply cursor-pointer;
+ }
+ .title{
+   @apply text-[20px] font-semibold ;
+ }

@@ -1,0 +1,21 @@
+/* Default styles */
+.responsive-chart {
+  width: 100%; /* Default width for smaller screens */
+  height: auto; /* Default height, adjusts automatically */
+}
+
+/* Medium screens (adjust as needed) */
+@media screen and (min-width: 768px) {
+  .responsive-chart {
+    width: 50%; /* 50% width on medium screens */
+    height: auto; /* Default height */
+  }
+}
+
+/* Large screens (adjust as needed) */
+@media screen and (min-width: 1024px) {
+  .responsive-chart {
+    width: 30%; /* 30% width on large screens */
+    height: auto; /* Default height */
+  }
+}

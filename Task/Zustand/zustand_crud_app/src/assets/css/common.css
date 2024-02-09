@@ -1,0 +1,58 @@
+.container {
+  @apply mx-auto my-[30px] flex flex-col justify-center items-center;
+}
+.card {
+  @apply p-4 rounded-2xl;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.heading {
+  @apply text-3xl font-semibold mb-3 uppercase text-center;
+}
+.btn-primary {
+  @apply p-3 text-xl font-semibold my-3 !bg-gray-300;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+table,
+td,
+th {
+  border: 1px solid black;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td {
+  text-align: center;
+}
+.add {
+  @apply w-full flex justify-end;
+}
+.form-group {
+  @apply w-full;
+}
+.form-label {
+  @apply text-2xl inline-block;
+}
+.form-control {
+  @apply border border-solid  w-full rounded-lg p-4;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+}
+.form-data {
+  @apply flex flex-col gap-3;
+}
+.error {
+  @apply text-red-500 font-medium ml-2;
+}
+.invalid {
+  @apply border-red-500;
+}
+.loader {
+  @apply !border-black rounded-full;
+  animation: rotation 1s linear infinite;
+}
+.data-loader {
+  @apply border-white border-4 border-b-gray-500 w-16 h-16 absolute bottom-0 top-[50%] left-[50%];
+}

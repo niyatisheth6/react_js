@@ -1,0 +1,158 @@
+react  js
+
+important file- package.json --> app details
+package.lock.jspn --> node module detail
+
+entry point in react js --> index.js
+
+start code  -> app.js
+in src folder --> create new file User.js--> file name and icon name always start with capital letter
+
+root element --> index.html
+
+start react file --> npm start
+refresh and install node module --> npm install
+
+
+install packkage --> npm i react-validation
+ 
+ 
+create react project --> npx create-react-app project_name
+                     --> cd project_name
+		     --> npm start
+                     --> code .
+-----------------------------------------------------------------------------
+
+*important note*
+---->we can not update value in both funtion for that reason we use state
+---->we always add key in data when we used map function in html 
+---->we always return false or either we can use else condition and return something if we use if condition in filter or find method in array
+-->hook - useState --> updata and maintain state
+        - useEffect --> particular condition --> once the component is render then what can i do this is use effect -> useEffect(function,dependencies means particular state)
+        
+        
+        
+---------------------important topic in class component--------------------------------
+1.componentdidMount --> first time loading
+2.ComponentDidiUpdate --> not first time
+                      --> run when state or props will update 
+		      --> always use with condition
+3.ComponentWillUnmount --> when remove something 
+
+-------------------------------------------------------------------
+----- In class component ------
+1.constucter
+2.render
+3.ShouldCopmonentupdate
+4.componentdidmount
+
+----------------------------------------------------------------
+---use style with 3 menthos ---
+1.<h1 className="primary"> hello</h1>
+2.<h1 style={{color:"red"}}> hello</h1>
+***create module css style.module.css
+1.<h1 className={style."primary"}> hello</h1>
+				
+---------------------------------------------------------------
+**Object refactor **
+const obj = {name:"rohan",add:{city:"dholka"},email:"rohan@gmail.com"}
+
+const{ name,add,email}=obj
+const{city}=add
+------------------------------------------------------------
+-->Side effect in useEffect -->only executed wheever some thing changes
+1)http repuest
+2)storing data in local storage
+3)working with timer function
+------------------------------------------------------------
+**Pure component ** ==> used in class component
+==> when other event perfome then stop the resendering
+
+**UseMemo** ==> used in fucntion component
+==> same as pure component
+--> syntax :- const variablename = useMemo(function example(return true or add data))
+-----------------------------------------------------------------------------
+**use fragment in 4 various way**
+1) <>... </>
+2) <div>... </div>
+3) <React.Fragment>... </React.Fragment/>
+4) import {Freagment} from "react"
+   <Fragment>...</Fragment>
+-----------------------------------------------------------------------------
+** pass props child to parent **
+--> parent component
+	function data(name){
+	console.log(name)
+	}
+	<Child data={data}/>
+--> child component
+	function Child(props){
+	let name = "ram"
+	<button onclick=(()=> props.data(name))></button>
+	
+-----------------------------------------------------------------------------
+** Ref in class component  and useRef in Function Component**
+--> ref use for dom manupulation --> ex:-form:- validation,color,focus all things use at a time
+--> ref alway use in emergency used for handle dom manupulation
+-->syntax :- 
+	let inputRef = useRef(null)
+	return(
+	function exm(){
+	inputRef.current.style.color="red"
+	)
+	<input ref={inputRef}/>
+	<button onclick={exm}>click me<button/>
+-----------------------------------------------------------------------------	
+** use || and && operator
+1)<h1>{"niyati" || "sheth"}</h1> --> "niyati"
+2)<h1>{"niyuu" && "shethhh"}</h1> --> "shethhh"
+-----------------------------------------------------------------------------	
+**  forwardRef in Function Component**
+-->same as useRef
+--> it is used for change dom in child with pass useref props from parent
+-----------------------------------------------------------------------------	
+** Controll component in Function Component**	
+--> when we control fields using state
+-----------------------------------------------------------------------------	
+** UnControll component in Function Component**	
+--> when we control fields using Dom
+-----------------------------------------------------------------------------
+---> get temporary data from api
+
+https://jsonplaceholder.typicode.com/todos/1  
+-----------------------------------------------------------------------------
+**useReducer
+syntax:-
+const[state,dispatch]=useReducer(reducer,initialValue)
+const reducer = (state,action) => {
+	return state;
+}
+-----------------------------------------------------------------------------
+------------------------------------API--------------------------------------
+-----------------------------------------------------------------------------
+**HTTP Request **
+1)get :- featching the data from the api
+2)post :- store the data in api
+3)put, patch:- update the data in api
+4)delete :- delete the data in api
+
+GET	/posts
+GET	/posts/1
+GET	/posts/1/comments
+GET	/comments?postId=1
+POST	/posts
+PUT	/posts/1
+PATCH	/posts/1
+DELETE	/posts/1
+
+-----------------------------------------------------------------------------
+------------------------------------Routes-----------------------------------
+-----------------------------------------------------------------------------
+1)npm install react-router-dom
+2)import {BowserRouter , Routes, Route} from 'react-router-dom'
+	<BowserRouter>
+	<Routes>
+	<Route path="/About element={<About/>}/>
+	</Routes>
+	</BowserRouter>
+

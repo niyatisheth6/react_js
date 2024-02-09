@@ -1,0 +1,46 @@
+1)useState 
+--> it is rerender
+const [data,setData] = useState("")
+	|       |
+currentvalue  Function
+
+2)useEffect  -> perform  as side effect
+--> first run console after run use effect
+--> use for api call for the first time 
+useEffect(()=>{
+console.log("useEffect");
+},[])
+
+3)useref -> it is uncontrolled
+change the dom element style,deign
+const inputValue = useRef(null)
+function getdata(){
+inputValue.current.value = "222";
+}
+<input ref={inputValue}/>
+
+4)useReducer --> pure component --> not provide any side effect
+const[state,dispatch]=useReducer(reducer,initialValue)
+const reducer = (state,action) => {
+	return state;
+}
+
+5)useContext --> context api data in component A directly pass com C without props
+--> context
+--> Provider
+--> Consumer --> useContext
+--------------------comA------------------------
+const Data = createContext();
+return(
+	<Data.Provider value={"Hello"}>
+	<ComB/>
+	</Data.Provider>
+)
+export {Data}
+--------------------comC------------------------
+const currentData = useContext(Data)
+return(
+	<h1>{currentData}</h1>
+}
+
+

@@ -1,0 +1,77 @@
+body {
+  @apply bg-black;
+}
+.registation_form {
+  @apply max-w-2xl w-full rounded-md p-3;
+  background: linear-gradient(to bottom, #8debff 0%, #6cacff 100%);
+}
+.heading {
+  @apply text-3xl leading-7 font-semibold text-center mb-3;
+}
+.form {
+  @apply p-3 rounded-md;
+  background: linear-gradient(to bottom, #8debff 0%, #6cacff 100%);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.form-group {
+  @apply flex flex-col mb-3 w-full;
+}
+.form-label {
+  @apply text-xl inline-block mb-[0.5px];
+}
+.form-control {
+  @apply outline-none border p-3 rounded-lg border-solid border-gray-400;
+}
+.btn-primary {
+  @apply p-4  rounded-xl text-xl font-semibold leading-6;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background: linear-gradient(to bottom, #f8c390 0%, #d279ee 100%) !important;
+}
+.error {
+  @apply text-red-500 font-medium ml-2;
+}
+.invalid {
+  @apply border-red-500;
+}
+.form-radio-btn {
+  @apply flex flex-col mb-3;
+}
+.radio-btn {
+  @apply flex gap-4 ml-5;
+}
+.check-btn,
+.selection {
+  @apply flex gap-3 mb-3;
+}
+
+.text-field {
+  @apply flex gap-2 justify-between;
+}
+.container {
+  @apply px-4 flex justify-center h-screen items-center;
+}
+
+.selection select {
+  @apply w-fit;
+}
+.table-data {
+  @apply max-w-6xl w-full rounded-md p-3 overflow-auto;
+  background: linear-gradient(to bottom, #8debff 0%, #6cacff 100%);
+}
+.table-container {
+  @apply border-collapse w-full;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.table-container td,
+.table-container th {
+  @apply border border-solid border-black p-2;
+}
+
+.table-container tr:nth-child(even) {
+  @apply bg-[#8DEBFF];
+}
+
+.table-container th {
+  @apply py-3 text-left bg-[#8DEBFF];
+}
